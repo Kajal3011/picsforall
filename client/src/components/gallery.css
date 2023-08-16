@@ -1,0 +1,151 @@
+.topic-link {
+    color: gray;
+    margin: 0.5rem;
+    /* padding: 5px; */
+    display: inline-block;
+    text-decoration: none;
+}
+
+.active-topic {
+    color: black;
+    padding-bottom: 5px;
+    /* text-decoration: underline; */
+    border-bottom: 2px solid black;
+}
+
+.card-container {
+    width: 87%;
+    padding: 1.25rem;
+    margin: 0 auto;
+}
+
+img.a {
+    width: 100%;
+}
+
+
+
+.red {
+    /* background-color: white; */
+    color: red;
+}
+
+
+
+.underline {
+    border-bottom: 2px solid #d0d0d0;
+    padding-left: 18px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 18px;
+}
+
+
+.tags {
+    background-color: #eee;
+    border-radius: 5px;
+    color: gray;
+    padding: 3px 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.img-det {
+    max-height: 80vh;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Hover effects */
+
+.pos:hover .download-btn,
+.pos:hover .profile,
+.pos:hover .like-btn,
+.pos:hover .edit-btn {
+    z-index: 5;
+}
+
+.pos:hover .overlay {
+    z-index: 2;
+}
+
+.profile:hover {
+    color: #fff;
+}
+
+.download-btn:hover,
+.edit-btn:hover {
+    background-color: white;
+    color: #000;
+}
+
+@media only screen and (max-width: 900px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .desktop {
+        display: flex;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .overlay,
+    .like-btn,
+    .edit-btn,
+    .download-btn,
+    .profile {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .overlay {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(148, 148, 148, 0.30) 50%, rgba(0, 0, 0, 0.30) 100%);
+        cursor: zoom-in;
+    }
+
+    .like-btn {
+        top: 18px;
+        right: 18px;
+    }
+
+    .edit-btn {
+        top: 18px;
+        left: 10px;
+    }
+
+    .download-btn {
+        bottom: 18px;
+        right: 18px;
+    }
+
+    .profile {
+        cursor: pointer;
+        bottom: 18px;
+        left: 18px;
+    }
+
+    .card-header,
+    .card-body {
+        padding: 0 !important;
+    }
+
+    .banner {
+        max-height: 84vh;
+    }
+}
